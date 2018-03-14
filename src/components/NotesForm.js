@@ -1,5 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { incId } from './actions/nextId';
+import { addNote } from './actions/notes';
+
 
 
 class NotesForm extends React.Component {
@@ -10,8 +13,8 @@ handleSubmit = (e) => {
   const { dispatch, id } = this.props
   const { name } = this.state
   const note = { name, id, important: false }
-  dispatch({ type: 'ADD_NOTE', note })
-  dispatch({ type: 'INC_ID'})
+  dispatch((addNote)(note))
+  dispatch(incId())
   this.setState({ name: '' })
 }
 

@@ -4,8 +4,8 @@ import { toggleNote } from '../actions/notes';
 
 
 const styles = {
-  important: { textDecoration: 'line-through',
-  color: 'green',
+  important: { textDecorationLine: 'underline',
+  color: 'red',
   }
 }
 
